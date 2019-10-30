@@ -1,0 +1,60 @@
+{
+	// Place your node-skeleton workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+  // }
+  "Gerador CRUD Controller": {
+    "scope": "javascript, typescript",
+    "prefix": "controller.crud",
+    "body": [
+      "import MyModel from '../models/MyModel'\n",
+      "export default {",
+      "\tasync index(req, res) {",
+      "\t\t //My code",
+      "\t},",
+      "\tasync store(req, res) {",
+      "\t\t //My code",
+      "\t},",
+      "\tasync show(req, res) {",
+      "\t\t //My code",
+      "\t},",
+      "\tasync update(req, res) {",
+      "\t\t //My code",
+      "\t},",
+      "\tasync destroy(req, res) {",
+      "\t\t //My code",
+      "\t}",
+      "}"
+    ],
+    "description": "Gera um crud Controller"
+  },
+  "Gerar CRUD Rotas": {
+    "scope": "javascript, typescript",
+    "prefix": "route.crud",
+    "body": [
+      "import MyController from '../controllers/MyController'\n",
+      "export default (app, prefix) => {",
+      "\tconst url = `\\${prefix}/` //base url, ex: api/users",
+      "\t//Rotas bases do CRUD",
+      "\tapp.get(url, MyController.index)",
+      "\tapp.post(url, MyController.store)",
+      "\tapp.get(`\\${url}/:id`, MyController.show)",
+      "\tapp.put(`\\${url}/:id`, MyController.update)",
+      "\tapp.delete(`\\${url}/:id`, MyController.destroy)",
+      "}"
+    ],
+    "description": "Gera um crud de rotas"
+  },
+}
